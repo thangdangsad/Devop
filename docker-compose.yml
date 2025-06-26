@@ -16,6 +16,8 @@ services:
         image: prom/node-exporter:latest
         container_name: node-exporter
         restart: always
+        ports:
+            - "9101:9100"
         volumes:
             - /proc:/host/proc:ro
             - /sys:/host/sys:ro
